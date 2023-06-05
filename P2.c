@@ -29,7 +29,7 @@ Node* insert_node(Node* root, int value) {
 
 void pre_order(Node* root) {
     if (root != NULL) {
-        printf("%d ", root->value);
+        printf(" %d", root->value);
         pre_order(root->left);
         pre_order(root->right);
     }
@@ -38,7 +38,7 @@ void pre_order(Node* root) {
 void in_order(Node* root) {
     if (root != NULL) {
         in_order(root->left);
-        printf("%d ", root->value);
+        printf("%d", root->value);
         in_order(root->right);
     }
 }
@@ -47,7 +47,7 @@ void post_order(Node* root) {
     if (root != NULL) {
         post_order(root->left);
         post_order(root->right);
-        printf("%d ", root->value);
+        printf(" %d", root->value);
     }
 }
 
@@ -72,11 +72,11 @@ int main() {
             root = insert_node(root, value);
         }
         printf("Case %d:\n", i + 1);
-        printf("Pre.: ");
+        printf("Pre.:");
         pre_order(root);
-        printf("\nIn..: ");
+        printf("\nIn..:");
         in_order(root);
-        printf("\nPost: ");
+        printf("\nPost:");
         post_order(root);
         free_tree(root);
     }
