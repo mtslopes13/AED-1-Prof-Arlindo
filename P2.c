@@ -78,7 +78,6 @@ int main() {
         in_order(root);
         printf("\nPost: ");
         post_order(root);
-        printf("\n\n");
         free_tree(root);
     }
     return 0;
